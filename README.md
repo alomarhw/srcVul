@@ -56,39 +56,4 @@ You may need to adjust the LSH parameters (number of bands, number of rows) and 
 Clone detection using srcClone: 
 
 Run Clone.py: replace the vectors list with your actual vectors. This script uses the LSHForest from scikit-learn to find nearest neighbors based on LSH and then applies a similarity threshold to detect code clones. You can adjust the n_neighbors and n_estimators parameters to fine-tune the search. Please note that you’ll need to adapt this script to work with your specific vector data format and similarity measures, but this should give you a starting point for detecting code clones based on your generated vectors.
-Clone detection using Nicad (optional): 
-You can use the open-source clone detection tool like “Nicad” to find source code clones. Here is a Python script that demonstrates how to use Nicad:
-
-import os
-import subprocess
-
-# Define the path to Nicad executable and the input parameters
-nicad_path = "/path/to/nicad/bin/nicad"
-input_directory = "/path/to/your/source/code"
-language = "java"  # Change this to the appropriate language (e.g., java, c, c++, etc.)
-output_directory = "/path/to/output/folder"
-
-# Create the output directory if it doesn’t exist
-if not os.path.exists(output_directory):
-    os.makedirs(output_directory)
-
-# Run Nicad clone detection
-command = [
-    nicad_path,
-    "-p", language,
-    input_directory,
-    "-o", output_directory,
-]
-subprocess.run(command)
-
-print("Nicad clone detection completed.")
-
-
-
-Replace the /path/to/nicad/bin/nicad with the actual path to the Nicad executable, set input_directory to the path of your source code, specify the programming language using the language variable, and set the output_directory where you want the results to be stored.
-
-This script will run Nicad on your source code and save the results in the specified output directory. Be sure to have Nicad installed and configured on your system before running the script. You can download Nicad from its GitHub repository: 
-
-Please note that the actual usage of Nicad may vary based on your specific codebase and requirements, so you should refer to Nicad’s documentation for more details on customizing clone detection parameters.
-
 
