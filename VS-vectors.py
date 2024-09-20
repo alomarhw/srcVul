@@ -12,7 +12,7 @@ slicing_vectors = {
     "File": {},
 }
 
-# Populate slicing vectors
+# Populate the slicing vectors
 for slice_name, metrics in slice_metrics.items():
     # Variable-level slicing vector
     slicing_vectors["Variable"][slice_name] = [
