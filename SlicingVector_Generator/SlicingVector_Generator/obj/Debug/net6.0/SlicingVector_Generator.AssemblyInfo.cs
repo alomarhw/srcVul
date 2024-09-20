@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SlicingVector_Generator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88e68b74ec423f33a5c5055a759f1747ecd9274e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+892a79e8cd06de71e8a5e69a27443548e9b02d76")]
 [assembly: System.Reflection.AssemblyProductAttribute("SlicingVector_Generator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SlicingVector_Generator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
