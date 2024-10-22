@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZQ/glsft2zj3waIHxWncc+BAShI+zJ2cORL9Io8WKBUCoQrAZK2nu0zAfQKCAPvaYfgQiorosJHu5Jx3oMNkbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\SlicingVector_Generator\\SlicingVector_Generator\\SlicingVector_Generator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Himal\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.118\\stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512",
+    "C:\\Users\\Himal\\.nuget\\packages\\system.data.sqlite.core\\1.0.118\\system.data.sqlite.core.1.0.118.nupkg.sha512"
+  ],
+  "logs": []
+}
