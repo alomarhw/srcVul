@@ -1,5 +1,5 @@
 # srcVul
-srcVul: Detecting Security Vulnerabilities in Code Clones using Scalable and Efficient Slicing-Based Techniques
+srcVul: A Slicing-Based Approach for Detecting and Patching Vulnerable Code Clones
 
 The srcVul system is designed to identify security vulnerabilities in code clones using a methodical three-stage process. It focuses on extracting non-contiguous, re-ordered, and intertwined statements related to vulnerabilities (𝑉 𝑅𝑠𝑡𝑚𝑡𝑠) from well-documented vulnerable programs and their corresponding patches for specific known vulnerabilities. This process includes:
 
