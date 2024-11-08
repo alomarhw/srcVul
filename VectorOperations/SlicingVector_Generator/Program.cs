@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Data.SQLite;
+﻿using System.Data.SQLite;
 
 public class DatabaseManager
 {
@@ -49,8 +45,7 @@ public class DatabaseManager
                     SC REAL,
                     SCvg REAL,
                     SI INTEGER,
-                    SS REAL,
-                    PatchedCode TEXT
+                    SS REAL
                 );";
 
             using (var command = new SQLiteCommand(createTrainingTableQuery, connection))
@@ -71,13 +66,17 @@ public class DatabaseManager
         }
     }
 
-    public void InsertVectorData(string tableName, string methodName, string variableName, double SC, double SCvg, double SI, double SS, string patchedCodeContent)
+    public void InsertVectorData(string tableName, string methodName, string variableName, double SC, double SCvg, double SI, double SS, string patchedCodeContent = null)
     {
         Console.WriteLine($"Inserting into {tableName}: Method={methodName}, Variable={variableName}, SC={SC}, SCvg={SCvg}, SI={SI}, SS={SS}");
 
-        string insertQuery = $@"
-            INSERT INTO {tableName} (MethodName, VariableName, SC, SCvg, SI, SS, PatchedCode)
-            VALUES (@MethodName, @VariableName, @SC, @SCvg, @SI, @SS, @PatchedCode);";
+        string insertQuery = tableName == "VectorData" ?
+            $@"
+                INSERT INTO {tableName} (MethodName, VariableName, SC, SCvg, SI, SS, PatchedCode)
+                VALUES (@MethodName, @VariableName, @SC, @SCvg, @SI, @SS, @PatchedCode);" :
+            $@"
+                INSERT INTO {tableName} (MethodName, VariableName, SC, SCvg, SI, SS)
+                VALUES (@MethodName, @VariableName, @SC, @SCvg, @SI, @SS);";
 
         using (var command = new SQLiteCommand(insertQuery, connection))
         {
@@ -87,7 +86,11 @@ public class DatabaseManager
             command.Parameters.AddWithValue("@SCvg", SCvg);
             command.Parameters.AddWithValue("@SI", SI);
             command.Parameters.AddWithValue("@SS", SS);
-            command.Parameters.AddWithValue("@PatchedCode", patchedCodeContent);
+
+            if (tableName == "VectorData")
+            {
+                command.Parameters.AddWithValue("@PatchedCode", patchedCodeContent);
+            }
 
             command.ExecuteNonQuery();
         }
@@ -239,7 +242,6 @@ public class SliceAnalyzer
         }
 
         var content = input.Substring(startIndex, endIndex - startIndex - 1);
-
         var cfuncEntries = string.IsNullOrEmpty(content) ? new List<string>() : content.Split(new[] { "}," }, StringSplitOptions.None).ToList();
 
         var cfuncs = new Dictionary<string, int>();
@@ -276,7 +278,7 @@ public class SliceAnalyzer
         return Tuple.Create(SC, SZ, SCvg, SI, SS);
     }
 
-        public Dictionary<string, Tuple<double, int, double, double, double>> GenerateVsVectors(Dictionary<string, List<SliceProfile>> sliceProfiles, int moduleSize)
+    public Dictionary<string, Tuple<double, int, double, double, double>> GenerateVsVectors(Dictionary<string, List<SliceProfile>> sliceProfiles, int moduleSize)
     {
         var vsVectors = new Dictionary<string, Tuple<double, int, double, double, double>>();
 
@@ -315,10 +317,14 @@ public class SliceAnalyzer
 
         Console.WriteLine($"The module size (number of lines including whitespaces) is: {moduleSize}");
 
-        // Step 2: Take file input for patched version
-        Console.WriteLine("Please provide the path to the patched version file:");
-        string patchedFilePath = Console.ReadLine();
-        string patchedCodeContent = File.ReadAllText(patchedFilePath);  // Read the patched code content as a single string
+        // Step 2: Take file input for patched version only if not testing
+        string patchedCodeContent = null;
+        if (!isTesting)
+        {
+            Console.WriteLine("Please provide the path to the patched version file:");
+            string patchedFilePath = Console.ReadLine();
+            patchedCodeContent = File.ReadAllText(patchedFilePath);
+        }
 
         // Step 3: Take file input for slice profiles
         Console.WriteLine("Please provide the path to the file with slice profiles:");
@@ -344,14 +350,14 @@ public class SliceAnalyzer
                 var vsVector = analyzer.ComputeSliceMetrics(sliceProfile, moduleSize);
 
                 databaseManager.InsertVectorData(
-                    tableName,                // Determine the correct table (VectorData or TestVectorData)
-                    methodEntry.Key,          // Method name
-                    sliceProfile.Variable,    // Variable name
-                    vsVector.Item1,           // SC
-                    vsVector.Item3,           // SCvg
-                    vsVector.Item4,           // SI
-                    vsVector.Item5,           // SS
-                    patchedCodeContent        // Patched code content
+                    tableName,
+                    methodEntry.Key,
+                    sliceProfile.Variable,
+                    vsVector.Item1,
+                    vsVector.Item3,
+                    vsVector.Item4,
+                    vsVector.Item5,
+                    patchedCodeContent
                 );
             }
         }
@@ -360,4 +366,3 @@ public class SliceAnalyzer
         Console.WriteLine($"Data has been inserted into {tableName}.");
     }
 }
-
