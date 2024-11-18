@@ -1,0 +1,4 @@
+716 if (parent) {
+717 mutex_lock(&parent->access);
+719 mutex_unlock(&parent->access);
+720 }

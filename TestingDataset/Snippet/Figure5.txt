@@ -1,0 +1,22 @@
+707 static struct snd_info_entry *
+708 snd_info_create_entry(const char *name,struct snd_info_entry *parent)
+709 {
+710 struct snd_info_entry *entry;
+711 entry = kzalloc(sizeof(*entry), GFP_KERNEL);
+712 if (entry == NULL)
+713 return NULL;
+714 entry->name = kstrdup(name, GFP_KERNEL);
+715 if (entry->name == NULL) {
+716 kfree(entry);
+717 return NULL;
+718 }
+719 entry->mode = S_IFREG | S_IRUGO;
+720 entry->content = SNDRV_INFO_CONTENT_TEXT;
+721 mutex_init(&entry->access);
+722 INIT_LIST_HEAD(&entry->children);
+723 INIT_LIST_HEAD(&entry->list);
+724 entry->parent = parent;
+725 if (parent)
+726 list_add_tail(&entry->list, &parent->children);
+727 return entry;
+728 }

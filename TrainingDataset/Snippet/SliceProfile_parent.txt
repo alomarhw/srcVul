@@ -1,0 +1,1 @@
+Linux-5.0.10/sound/core/info.c,snd_info_create_entry,parent,def{697},use{714,716,717},dvars{},ptrs{},cfuncs{list_add_tail{2}}
