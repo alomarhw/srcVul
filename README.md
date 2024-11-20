@@ -109,3 +109,16 @@ Convert the source code to srcML representation
     e.	SCvg: Slice Coverage.
     f.	SI: Slice Identifier.
     g.	SS: Slice Spatial.
+
+
+## Clone Detection Script
+
+The `CloneDetection` folder contains a Python script for identifying and grouping vulnerabilities with similar slicing vectors using MinHash and LSH.
+
+### Key Features
+- Detect and group CVEs with similar slicing vectors.
+- Efficient processing using MinHash and Locality-Sensitive Hashing.
+- Outputs clone groups and clone pairs for further analysis.
+
+For detailed information about the script, including how it works, input/output details, and usage instructions, please refer to the [README file in the `CloneDetection` folder](CloneDetection/README.md).
+
