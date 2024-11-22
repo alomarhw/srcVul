@@ -156,6 +156,18 @@ The metrics (SC, SZ, SCvg, SI, SS) are stored in an SQLite database (`vectors.db
 
 ---
 
+# TestingDataset
+
+The `TestingDataset` folder contains data and snippets used for testing vulnerabilities and generating slicing profiles. It includes examples and datasets for different systems, as referenced in the paper.
+
+### Contents
+- **Snippet Folder**: Contains an example of code snippet and slice profile related to vulnerabilities.
+- **Data Folder**: Contains testing data for four different systems.
+
+For detailed information, refer to the [README file in the `TestingDataset` folder](TestingDataset/README.md).
+
+---
+
 ## Clone Detection Script
 
 The `CloneDetection` folder contains a Python script for identifying and grouping vulnerabilities with similar slicing vectors using MinHash and LSH.
