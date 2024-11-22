@@ -156,7 +156,21 @@ The metrics (SC, SZ, SCvg, SI, SS) are stored in an SQLite database (`vectors.db
 
 ---
 
-# TestingDataset
+## TrainingDataset
+
+The `TrainingDataset` folder contains data used for training and evaluating the system for detecting and patching vulnerabilities. It includes example snippet, it's patched version, slicing profile, and a main dataset in CSV format, as referenced in the research paper.
+
+### Contents
+
+- **Snippet Folder**: Contains an example snippet, it's corresponding patched code, and slicing profile related to the variable.
+- **Data Folder**: Contains the main dataset in CSV format used for generating generalized results.
+
+For detailed information, refer to the [README file in the `TrainingDataset` folder](TrainingDataset/README.md).
+
+
+---
+
+## TestingDataset
 
 The `TestingDataset` folder contains data and snippets used for testing vulnerabilities and generating slicing profiles. It includes examples and datasets for different systems, as referenced in the paper.
 

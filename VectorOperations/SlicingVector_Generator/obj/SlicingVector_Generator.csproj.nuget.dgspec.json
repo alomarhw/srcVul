@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj": {}
+    "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj": {
+    "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj",
+        "projectUniqueName": "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj",
         "projectName": "SlicingVector_Generator",
-        "projectPath": "c:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj",
+        "projectPath": "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\SlicingVector_Generator.csproj",
         "packagesPath": "C:\\Users\\Himal\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\obj\\",
+        "outputPath": "C:\\Users\\Himal\\Desktop\\Research\\srcVul\\VectorOperations\\SlicingVector_Generator\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Himal\\AppData\\Roaming\\NuGet\\NuGet.Config",

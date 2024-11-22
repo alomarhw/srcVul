@@ -1,18 +1,18 @@
 # TestingDataset
 
 This folder contains two subfolders:
-1. **Snippet**: Contains example snippets explained in the paper.
+1. **Snippet**: Contains target example snippet explained in the paper.
 2. **Data**: Contains testing datasets for four different systems.
 
 ## Snippet Folder
 This folder contains the following files:
 - **Figure5.txt**:  
-  Contains a few lines of code associated with a vulnerability.  
-  This file demonstrates an example snippet explained in the research paper.
+  Contains a few lines of code to be tested for vulnerability.  
+  This file demonstrates an example snippet (Figure 5) explained in the research paper.
 
 - **SliceProfile_parent.txt**:  
   Contains slice profiles for the variable `parent`.  
-  This file is linked to the example snippet in the paper.
+  This file is linked to the example snippet (Figure 6) in the paper.
 
 ## Data Folder
 This folder contains the following files:
