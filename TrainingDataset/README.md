@@ -1,7 +1,7 @@
 # TrainingDataset
 
 This folder contains two subfolders:
-1. **Snippet**: Contains example snippets, patched code, and slicing profiles used to demonstrate vulnerabilities and fixes as explained in the paper.
+1. **Snippet**: Contains example snippet, patched code, and slicing profile used to demonstrate vulnerability and corresonding fix as explained in the paper.
 2. **Data**: Contains the main dataset in CSV format used for training and evaluating the system.
 
 ---

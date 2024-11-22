@@ -139,7 +139,7 @@ Where:
   - Build the solution (`Ctrl + Shift + B`) and run it (`F5`).  
 
 2. **Input Requirements**:  
-- Indicate whether the data is for testing (`yes/no`).  
+- Indicate whether the data is for testing (`yes/no`). If no (training), it'll ask a path to the patched file as the third input.
 - Provide the path to the code file (used to calculate module size).  
 - Provide the path to the slice profile file.  
 
