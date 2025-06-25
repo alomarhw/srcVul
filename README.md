@@ -134,7 +134,7 @@ You can generate the slice vectors using either the Python script or the C# solu
 - We recommend using the **Python version**, as it is easier to execute and is the most up-to-date implementation.  
   Please follow the instructions provided in the [VectorOperations_Python README](VectorOperations_Python/README.md).
 
-- Alternatively, you can also use the **C# solution** by following the instructions provided in the [VectorOperations/SlicingVector_Generator README](VectorOperations/SlicingVector_Generator/README.md).
+- Alternatively, you can also use the **C# solution** by following the instructions provided in the [VectorOperations README](VectorOperations/README.md).
 
 ---
 
