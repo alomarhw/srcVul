@@ -193,3 +193,15 @@ The `CloneDetection` folder contains a Python script for identifying and groupin
 
 For detailed information, refer to the [README in the `CloneDetection` folder](CloneDetection/README.md).
 
+---
+
+## Accuracy Classifier Script
+
+The `AccuracyClassifier` folder contains a Python script for evaluating vulnerability detection performance by classifying vulnerabilities into True Positives (TP), False Positives (FP), True Negatives (TN), and False Negatives (FN) using slicing vectors.
+
+### Key Features:
+- Classifies vulnerabilities based on slicing vector similarity.
+- Calculates and tracks TP, FP, TN, and FN for each detected vulnerability.
+- Outputs classification metrics and the associated file IDs for each category.
+
+For detailed information, refer to the [README in the `AccuracyClassifier` folder](AccuracyClassifier/README.md).
