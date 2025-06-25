@@ -7,11 +7,10 @@
       python SlicingVector_Generator.py
       ```
 
-- **Requirements:**
-- Python 3.x
-- `pymongo` library (`pip install pymongo`)
-- MongoDB instance running locally (default URL: `mongodb://localhost:27017/`)  
-  or a hosted MongoDB instance (you can update the connection URL accordingly).
+**Requirements:**
+      - Python 3.x
+      - `pymongo` library (`pip install pymongo`)
+      - MongoDB instance running locally (default URL: `mongodb://localhost:27017/`) or a hosted MongoDB instance (you can update the connection URL accordingly).
 
 ### 2. Input Requirements:
 
