@@ -127,32 +127,14 @@ Where:
 - `Sf` denotes the first statement in the slice.  
 - `Sl` denotes the last statement in the slice.  
 
-#### Instructions for Running the C# Solution
+## Generating Slice Vectors
 
-1. **Open the Solution File** (`SlicingVector_Generator.sln`):  
-- **In Visual Studio Code**:  
-  - Open the folder containing the solution file in VS Code.  
-  - Install the C# extension by Microsoft if not already installed.  
-  - Press `Ctrl + F5` to run the project without debugging or click on the Run button in the toolbar.  
-- **In Visual Studio**:  
-  - Open the solution file.  
-  - Build the solution (`Ctrl + Shift + B`) and run it (`F5`).  
+You can generate the slice vectors using either the Python script or the C# solution:
 
-2. **Input Requirements**:  
-- Indicate whether the data is for testing (`yes/no`). If no (training), it'll ask a path to the patched file as the third input.
-- Provide the path to the code file (used to calculate module size).  
-- Provide the path to the slice profile file.  
+- We recommend using the **Python version**, as it is easier to execute and is the most up-to-date implementation.  
+  Please follow the instructions provided in the [VectorOperations_Python README](VectorOperations_Python/README.md).
 
-3. **Database Output**:  
-The metrics (SC, SZ, SCvg, SI, SS) are stored in an SQLite database (`vectors.db`), with fields:  
-- MethodName  
-- VariableName  
-- SC (Slice Count)  
-- SZ (Slice Size)  
-- SCvg (Slice Coverage)  
-- SI (Slice Identifier)  
-- SS (Slice Spatial)  
-- Patched Text (if it’s training data)  
+- Alternatively, you can also use the **C# solution** by following the instructions provided in the [VectorOperations/SlicingVector_Generator README](VectorOperations/SlicingVector_Generator/README.md).
 
 ---
 
