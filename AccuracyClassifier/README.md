@@ -51,37 +51,37 @@ Prints the counts of TP, FP, TN, and FN along with the IDs of the corresponding 
   - Non-CVE diffs are checked for false positives (FP) or true negatives (TN).
 
 ### 4. Output Results
-**True Positives (TP)**:
-Correctly detected vulnerabilities.
-
-**False Negatives (FN)**:
-Missed vulnerabilities.
-
-**False Positives (FP)**:
-Incorrectly detected vulnerabilities.
-
-**True Negatives (TN)**:
-Correctly identified non-vulnerabilities.
-
-**Example Output**:
-
-- True Positives (TP): 12
-- False Negatives (FN): 4
-- False Positives (FP): 3
-- True Negatives (TN):  1
-
-Final Counts:
-- Total True Positives (TP): 12
-- TP IDs: ['file1.diff', 'file2.diff', ...]
-
-- Total False Negatives (FN): 4
-- FN IDs: ['file3.diff', 'file4.diff', ...]
-
-- Total False Positives (FP): 3
-- FP IDs: ['file5.diff', 'file6.diff', ...]
-
-- Total True Negatives (TN): 1
-- TN IDs: ['file7.diff']
+  **True Positives (TP)**:
+    Correctly detected vulnerabilities.
+  
+  **False Negatives (FN)**:
+    Missed vulnerabilities.
+  
+  **False Positives (FP)**:
+    Incorrectly detected vulnerabilities.
+  
+  **True Negatives (TN)**:
+    Correctly identified non-vulnerabilities.
+  
+  **Example Output**:
+  
+    - True Positives (TP): 12
+    - False Negatives (FN): 4
+    - False Positives (FP): 3
+    - True Negatives (TN):  1
+  
+    Final Counts:
+      - Total True Positives (TP): 12
+      - TP IDs: ['file1.diff', 'file2.diff', ...]
+      
+      - Total False Negatives (FN): 4
+      - FN IDs: ['file3.diff', 'file4.diff', ...]
+      
+      - Total False Positives (FP): 3
+      - FP IDs: ['file5.diff', 'file6.diff', ...]
+      
+      - Total True Negatives (TN): 1
+      - TN IDs: ['file7.diff']
 
 ---
 
@@ -89,27 +89,27 @@ Final Counts:
 
 1. **Python Libraries**:
 
-  os, re, json, shutil, hashlib, datetime, collections
+    os, re, json, shutil, hashlib, datetime, collections
 
 2. **Input Data**:
 
-  - Diff files in CVE_DIFFS_PATH directory.
-  
-  - JSON files containing patch metadata in PATCH_METADATA_PATH directory.
+    - Diff files in CVE_DIFFS_PATH directory.
+    
+    - JSON files containing patch metadata in PATCH_METADATA_PATH directory.
 
 3. **Configuration**:
 
-  Modify the following paths in the script to match your environment:
-
-  - `CVE_DIFFS_PATH` : Path to the directory containing diff files.
+    Modify the following paths in the script to match your environment:
   
-  - `PATCH_METADATA_PATH`: Path to the directory containing patch metadata files.
-  
-  - 'UNIQUE_PATCH_METADATA_PATH`: Path to the directory storing unique patch metadata.
+    - `CVE_DIFFS_PATH`: Path to the directory containing diff files.
+    
+    - `PATCH_METADATA_PATH`: Path to the directory containing patch metadata files.
+    
+    - 'UNIQUE_PATCH_METADATA_PATH`: Path to the directory storing unique patch metadata.
 
 ---
 
-##Usage##
+## Usage
 
 1. **Run the Script**:
   Execute the following command:
