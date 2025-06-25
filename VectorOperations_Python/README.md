@@ -7,12 +7,13 @@
       python SlicingVector_Generator.py
       ```
 
-**Environment Requirements**
+### 2. Environment Requirements:
+
       - Python 3.x
       - `pymongo` library (`pip install pymongo`)
       - MongoDB instance running locally (default URL: `mongodb://localhost:27017/`) or a hosted MongoDB instance (you can update the connection URL accordingly).
 
-### 2. Input Requirements:
+### 3. Input Requirements:
 
 - Indicate whether the data is for testing (`yes/no`).  
   If `no` (training), it will ask for:
@@ -22,7 +23,7 @@
 - Provide the path to the code file (used to calculate module size).
 - Provide the path to the slice profile file.
 
-### 3. Database Output:
+### 4. Database Output:
 
 The computed metrics are stored in a MongoDB database (`SliceMetricsDB`), in the following collections:
 
@@ -41,7 +42,7 @@ Each record contains:
 - `VariableName`
 - `PatchedCode` (only for training data)
 
-### 4. Notes:
+### 5. Notes:
 
 - The script will automatically create the collections if they do not exist.
 - If the module size or slice profiles are invalid, the script will exit gracefully.
