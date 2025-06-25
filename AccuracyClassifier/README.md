@@ -89,40 +89,40 @@ Final Counts:
 
 1. **Python Libraries**:
 
-os, re, json, shutil, hashlib, datetime, collections
+  os, re, json, shutil, hashlib, datetime, collections
 
 2. **Input Data**:
 
-- Diff files in CVE_DIFFS_PATH directory.
-
-- JSON files containing patch metadata in PATCH_METADATA_PATH directory.
+  - Diff files in CVE_DIFFS_PATH directory.
+  
+  - JSON files containing patch metadata in PATCH_METADATA_PATH directory.
 
 3. **Configuration**:
 
-Modify the following paths in the script to match your environment:
+  Modify the following paths in the script to match your environment:
 
-- `CVE_DIFFS_PATH` : Path to the directory containing diff files.
-
-- `PATCH_METADATA_PATH`: Path to the directory containing patch metadata files.
-
-- 'UNIQUE_PATCH_METADATA_PATH`: Path to the directory storing unique patch metadata.
+  - `CVE_DIFFS_PATH` : Path to the directory containing diff files.
+  
+  - `PATCH_METADATA_PATH`: Path to the directory containing patch metadata files.
+  
+  - 'UNIQUE_PATCH_METADATA_PATH`: Path to the directory storing unique patch metadata.
 
 ---
 
 ##Usage
 
 1. **Run the Script**:
-Execute the following command:
-- python Positives_Negatives_Classifier.py
+  Execute the following command:
+  - python Positives_Negatives_Classifier.py
   
 2. **Enter Paths**:
-The script will prompt you to input the following paths:
+  The script will prompt you to input the following paths:
 
-- CVE Diff Directory: Path to the directory containing .diff files (e.g., /Users/gyawalh/srcVul/CVE_Diffs).
+  - CVE Diff Directory: Path to the directory containing .diff files (e.g., /Users/gyawalh/srcVul/CVE_Diffs).
 
-- Patch Metadata Directory: Path to the directory containing .json metadata files (e.g., /Users/gyawalh/srcVul/patch_metadata).
-
-- Unique Patch Metadata Directory: Path to store unique metadata for testing purposes (e.g., /Users/gyawalh/srcVul/unique_patch_metadata).
+  - Patch Metadata Directory: Path to the directory containing .json metadata files (e.g., /Users/gyawalh/srcVul/patch_metadata).
+  
+  - Unique Patch Metadata Directory: Path to store unique metadata for testing purposes (e.g., /Users/gyawalh/srcVul/unique_patch_metadata).
 
 3. **Results**:
-After processing, the script will display the classification results and output the IDs of the files categorized as TP, FP, FN, or TN.
+  After processing, the script will display the classification results and output the IDs of the files categorized as TP, FP, FN, or TN.
