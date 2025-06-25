@@ -177,6 +177,7 @@ The `TestingDataset` folder contains data and snippets used for testing vulnerab
 ### Contents
 - **Snippet Folder**: Contains an example of code snippet and slice profile related to vulnerabilities.
 - **Data Folder**: Contains testing data for four different systems.
+- **Slices Folder**: Contains the slices for the testing systems, generated using srcSlice.
 
 For detailed information, refer to the [README file in the `TestingDataset` folder](TestingDataset/README.md).
 
