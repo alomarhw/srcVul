@@ -3,6 +3,7 @@
 This folder contains two subfolders:
 1. **Snippet**: Contains target example snippet explained in the paper.
 2. **Data**: Contains testing datasets for four different systems.
+3. **Slices**: Contains the slices for the testing systems.
 
 ## Snippet Folder
 This folder contains the following files:
@@ -20,6 +21,12 @@ This folder contains the following files:
 - **libvirt-1.1.0.tar.gz**: Testing data for the `libvirt` system.
 - **linux-4.14.76.tar.gz**: Testing data for the `Linux` system.
 - **samba-4.0.26.tar.gz**: Testing data for the `Samba` system.
+
+## Slices Folder
+This folder contains the following files:
+- **libvirt-1.1.0.slice.xml**: Slices generated from srcSlice for the `libvirt` system.
+- Since the other systems are too large to upload to the GitHub repository, we have provided a Google Drive link:
+ [Download Large Slices Files]( https://drive.google.com/drive/folders/11ycRBv6Wr3W6lCHLRxJ1LnQwCAywX2Jp)
 
 Each file provides testing datasets and real-world systems that were analyzed for vulnerabilities.
 
